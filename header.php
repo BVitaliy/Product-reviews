@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     
+    <?php
+        require_once "functions.php";
+    ?>
+    
 </head>
 <body>
  
