@@ -1,7 +1,7 @@
 # Product-reviews
 
 Таблиця відгуків містить таку структуру:<br> 
-<img src="https://drive.google.com/file/d/1jeAFOHzCx9vpthLpuvEd01j0rFpU6j5q/view?usp=sharing"><br> <br> 
+<img src="https://BVitalii.github.io/Product-reviews/_img/table-reviews.jpg"><br> <br> 
 
 Статуси відгуків:
 1 - відхилено, 2 - опубліковано, 3 - в черзі;
