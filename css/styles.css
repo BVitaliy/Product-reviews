@@ -9,7 +9,7 @@
 }
 .reviews-list {
     max-height: 70vh;
-    overflow: auto;
+/*    overflow: auto;*/
     border-bottom: 2px solid #eee;
     margin-bottom: 50px;
     padding-bottom: 15px;
@@ -40,6 +40,8 @@
     overflow: hidden;
     border-radius: 50%;
     position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 .reviews-list .review-photo img {
     position: absolute;
