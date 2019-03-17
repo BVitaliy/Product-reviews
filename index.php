@@ -3,7 +3,7 @@
     require "header.php";
     $reviews = getReviews ();
 ?>
-   
+ 
    <div class="reviews-page">
     <div class="container">
         <h1>Відгуки</h1>
@@ -11,22 +11,24 @@
         <div class="reviews-list">
         <?php
             for($i = 0; $i < count($reviews); $i++){
-                echo '                    
-                      <div class="review-item">
-                        <div class="review-header">
-                            <div class="review-photo">
-                                <img src="img/photo.png" alt="">
+                if ($reviews[$i]["status"] == 1 ){
+                    echo '                    
+                          <div class="review-item">
+                            <div class="review-header">
+                                <div class="review-photo">
+                                    <img src="uploads/'.$reviews[$i]["photo"].'" alt="'.$reviews[$i]["photo"].'">
+                                </div>
+                                <div class="review-info">
+                                    <div class="name">'.$reviews[$i]["name"].'</div>
+                                    <a href="" class="email">'.$reviews[$i]["email"].'</a>   
+                                    <div class="date">'.$reviews[$i]["date"].' | '.$reviews[$i]["time"].'</div>
+                                </div>
                             </div>
-                            <div class="review-info">
-                                <div class="name">'.$reviews[$i]["name"].'</div>
-                                <a href="" class="email">'.$reviews[$i]["email"].'</a>   
-                                <div class="date">'.$reviews[$i]["date"].' | '.$reviews[$i]["time"].'</div>
+                            <div class="review-text">
+                                 '.$reviews[$i]["message"].'
                             </div>
-                        </div>
-                        <div class="review-text">
-                             '.$reviews[$i]["message"].'
-                        </div>
-                    </div> ';
+                        </div> ';
+                }
             }      
         ?>
            
@@ -34,7 +36,7 @@
 <!--        Форма для відгука-->
         <div class="review-form">
             <h2>Залишіть відгук</h2>
-            <form id="review-form" action="send.php" method="post">
+            <form id="review-form" enctype="multipart/form-data" action="send.php" method="post">
                 <div class="form-group">
                     <label for="email">E-mail <em>*</em></label>
                     <input type="email" name="email" class="form-control" id="email" required>
@@ -46,8 +48,7 @@
                     <div class="error"></div>
                 </div>  
                 <div class="form-group">
-                    <label for="photo">Фото</label>
-                    <input type="file" name="photo" class="form-control" id="photo">
+                    <label class="photo btn btn-success" data-title="Виберіть фото"><input type="file" name="photo"></label>
                 </div>               
                 <div class="form-group">
                     <label for="text">Текст відгуку <em>*</em></label>
@@ -61,7 +62,6 @@
         </div>
     </div>
 </div>
- 
 <?php
     require "footer.php"
 ?>

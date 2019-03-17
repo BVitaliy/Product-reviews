@@ -47,6 +47,9 @@
     top: 50%;
     transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
+    max-width: 150%;
+    max-height: 150%;
+    min-width: 100%;
     
 }
 .reviews-list .review-info {
@@ -73,11 +76,20 @@
 .review-form .form-control {
     resize: none;
 }
- 
+label.photo input{
+    display: none;
+} 
+label.photo:before{
+    content: attr(data-title);
+}
 .review-form em {
     color: red;
 }
 .review-form .btn{
     display: block;
     margin: auto;
+}
+
+.navbar{
+    border-radius: 0;
 }

@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    
+    //ajax выдправка форми на сервер
    $('#review-form').submit(function(e){
        e.preventDefault();
        
