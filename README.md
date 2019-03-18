@@ -22,11 +22,8 @@ send.php
 
 
 <h3>Ф-ї на сторінці адміна для відгуків</h3>
-functions/approve.php:<br>
-Зміна статусу для публікації відгуку<br><br>
+<h5>functions/approve.php: Зміна статусу для публікації відгуку</h5> 
 
-functions/reject.php:<br>
-Відмова в публікації відгуку<br><br>
+<h5>functions/reject.php: Відмова в публікації відгуку</h5>
 
-functions/delete.php:<br>
-Видалення відгуку<br><br>
+<h5>functions/delete.php: Видалення відгуку</h5> 
