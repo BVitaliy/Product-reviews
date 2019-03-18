@@ -11,7 +11,7 @@
         <div class="reviews-list">
         <?php
             for($i = 0; $i < count($reviews); $i++){
-                if ($reviews[$i]["status"] == 1 ){
+                if ($reviews[$i]["status"] == 2 ){
                     echo '                    
                           <div class="review-item">
                             <div class="review-header">
@@ -36,7 +36,7 @@
 <!--        Форма для відгука-->
         <div class="review-form">
             <h2>Залишіть відгук</h2>
-            <form id="review-form" enctype="multipart/form-data" action="send.php" method="post">
+            <form id="review-form" enctype="multipart/form-data" action="functions/send.php" method="post">
                 <div class="form-group">
                     <label for="email">E-mail <em>*</em></label>
                     <input type="email" name="email" class="form-control" id="email" required>

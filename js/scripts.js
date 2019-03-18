@@ -6,7 +6,7 @@ $(document).ready(function(){
        
        $.ajax({
 			type: "POST",
-			url: "send.php",
+			url: "./functions/send.php",
            data: new FormData(this),
            contentType: false,
            cache: false,

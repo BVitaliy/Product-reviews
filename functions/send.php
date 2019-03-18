@@ -1,5 +1,5 @@
 <?php 
-    include "connectDB.php";
+    require_once "connectDB.php";
 
     $email = strip_tags(trim($_POST['email']));
     $name = strip_tags(trim($_POST['name']));
@@ -20,7 +20,7 @@
     $photoname =  $date.'_'.$nameTimePart.'.'.$type;
     
     //Завантаження картинки в директорію
-    $uploaddir = 'uploads/';
+    $uploaddir = '../uploads/';
     $uploadfile = $uploaddir . basename($photoname);
     move_uploaded_file($_FILES['photo']['tmp_name'], $uploadfile);
  
