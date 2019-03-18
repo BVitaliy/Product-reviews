@@ -20,11 +20,13 @@ send.php
 
 В файлі scripts.js написана ф-я для відправки форми за допомогою ajax 
 
-functions/approve.php:
-Зміна статусу для публікації відгуку
 
-functions/reject.php:
-Відмова в публікації відгуку
+<h3>Ф-ї на сторінці адміна для відгуків</h3>
+functions/approve.php:<br>
+Зміна статусу для публікації відгуку<br><br>
 
-functions/delete.php:
-Видалення відгуку
+functions/reject.php:<br>
+Відмова в публікації відгуку<br><br>
+
+functions/delete.php:<br>
+Видалення відгуку<br><br>
